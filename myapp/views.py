@@ -2,10 +2,18 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import View
 
-# Create your views here.
-def home(request):
-  return HttpResponse("<h1>Hello Django!</h1>")
 
+# Create your views here.
+class HomePageView(View):
+  template_name = "home.html"
+  def get(self, request):
+    context = {
+      'page_title': 'Home Page for Big Wave Surfing',
+      'page_heading':  'Welcome to the 3rd most dangerous sport in the world!',
+      'page_content': 'Praia do Norte Lighthouse in Nazaré Portugal, where giant waves are formed due to a submarine canyon called the "Nazaré Canyon".  It is the largest underwater canyon in Europe and is about 230 kilometers (140 miles) long with a depth of approximately 5,000 metres (16,000 ft).',
+    }
+    return render(request, 'home.html', context)
+    
 def function_view(request):
     context = {
         'page_title': 'Function-Based View',
@@ -20,8 +28,8 @@ class ClassView(View):
   def get(self, request):
       context = {
           'page_title': 'Big Wave Surfing',
-          'page_heading': 'Welcome to the 3rd most dangerous sport in the world',
-          'page_content': 'This is Nazaré, Portugal, where giant waves are formed due to a submarine canyon called the "Nazaré Canyon".  It is the largest underwater canyon in Europe and is about 230 kilometers (140 miles) long with a depth of approximately 5,000 metres (16,000 ft).',
+          'page_heading': 'Big Wave Surfing',
+          'page_content': '',
       }
       return render(request, 'bigwavesurfing.html', context)
 
