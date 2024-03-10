@@ -19,7 +19,7 @@ class AboutView(View):
   def get(self, request):
     context = {
       'page_title': 'About Big Wave Surfing',
-      'page_heading':  ' ',
+      'page_heading':  'Big Wave Surfing in Western Australia',
       'page_content': 'The Right is a big wave surfing spot on the southern coast of Western Australia.  The waves are very dangerous because they break over a shallow reef, creating a large hollow tube that can reach up to 20 feet (6 meters) in height. Watch - https://www.redbull.com/au-en/the-right-like-youve-never-seen-it-before',
     }
     return render(request, 'about.html', context)
