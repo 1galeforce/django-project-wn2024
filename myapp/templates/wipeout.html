@@ -1,0 +1,24 @@
+<!-- templates/bootswatch.html -->
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="jumbotron">
+        <h1>{{ page_heading }}</h1>
+        <p>{{ page_content }}</p>
+    </div>
+</div>
+<p><img src="{% static 'images/wipeout1.jpg' %}" alt="Wipeouts"></p>
+<p><img src="{% static 'images/wipeout2.jpg' %}" alt="Wipeouts"></p>
+<p><img src="{% static 'images/wipeout3.jpg' %}" alt="Wipeouts"></p>
+<p><img src="{% static 'images/wipeout4.jpg' %}" alt="Wipeouts"></p>
+<p><img src="{% static 'images/wipeout5.jpg' %}" alt="Wipeouts"></p>
+<p><img src="{% static 'images/wipeout6.jpg' %}" alt="Wipeouts"></p>
+<p><img src="{% static 'images/wipeout7.webp' %}" alt="Wipeouts"></p>
+
+<p><img src="{% static 'images/django-logo-min.png' %}" alt="Django Logo"></p>
+
+{% endblock %}
+
