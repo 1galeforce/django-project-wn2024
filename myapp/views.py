@@ -23,9 +23,9 @@ class HomePageView(View):
   template_name = "home.html"
   def get(self, request):
     context = {
-      'page_title': 'Home Page for Big Wave Surfing',
-      'page_heading':  'Welcome to the 3rd most dangerous sport in the world!',
-      'page_content': 'Praia do Norte Lighthouse in Nazaré Portugal, where giant waves are formed due to a submarine canyon called the "Nazaré Canyon".  It is the largest underwater canyon in Europe and is about 230 kilometers (140 miles) long with a depth of approximately 5,000 metres (16,000 ft).',
+      'page_title':'Home Page for Big Wave Surfing',
+      'page_heading':'Welcome to the 3rd most dangerous sport in the world!',
+      'page_content': '',
     }
     return render(request, 'home.html', context)
 
@@ -35,9 +35,9 @@ class AboutView(View):
   template_name = "about.html"
   def get(self, request):
     context = {
-      'page_title': 'About Big Wave Surfing',
-      'page_heading':  'Big Wave Surfing in Western Australia',
-      'page_content': 'The Right is a big wave surfing spot on the southern coast of Western Australia.  The waves are very dangerous because they break over a shallow reef, creating a large hollow tube that can reach up to 20 feet (6 meters) in height. Watch - https://www.redbull.com/au-en/the-right-like-youve-never-seen-it-before',
+      'page_title':'About Big Wave Surfing',
+      'page_heading':'Big Wave Surfing in Western Australia',
+      'page_content':'"The Right" is a big wave surfing spot on the southern coast of Western Australia.  The waves are very dangerous because they break over a shallow reef, creating a large hollow tube that can reach up to 20 feet (6 meters) in height. Watch - https://www.redbull.com/au-en/the-right-like-youve-never-seen-it-before',
     }
     return render(request, 'about.html', context)
 
@@ -46,7 +46,7 @@ class SurfingView(View):
     context = {
       'page_title': 'Big Wave Surfing',
       'page_heading': 'Big Wave Surfing',
-      'page_content': 'The first video (https://www.youtube.com/watch?v=CIXbZPHLv2o&feature=youtu.be) is of Sebastian Steudtner, a German surfer, breaking the world record for biggest wave ever ridden with a monstrous 86-footer at Nazare in Portugal (October 2020). The next video (https://www.youtube.com/watch?v=1DJxAYc-5IM) was recently filmed over a 3 day period in Febuary 2024 (Feb. 22, 23, and 24) at Nazaré, Portugal.',
+      'page_content': '',
     }
     return render(request, 'bigwavesurfing.html', context)
 
@@ -56,7 +56,7 @@ class LocationView(View):
     context = {
       'page_title': 'Best Locations Worldwide',
       'page_heading': 'BIGGEST WAVES IN THE WORLD',
-      'page_content': 'Locations: Praia do Norte / Nazaré, Jaws/Peahi, Shipstern Bluff, Puerto Escondido/Playa Zicatela, Punta de Lobos, Pico Alto, Punta Galea, Dungeons, Nelscott Reef, Killers/Todos Santos, Belharra, Mullaghmore Head, Aileens, Banzai Pipeline, Waimea Bay, Cloudbreak, Cortes Bank, Mavericks, Teahupoo, Ghost Tree/Pescadero Point, Velzyland, Log Cabins, The Wedge, Cow Bombie|Cowaramup Bombora, Cape Fear|Ours, The Right, Pedra Branca, The Cribbar Reef, El Buey, Playa Gris|Roca Puta, Papatowai, Laje da Besta, Laje do Shock, Laje da Avalanche',
+      'page_content': '',
   }
    
     return render(request, 'location.html', context)

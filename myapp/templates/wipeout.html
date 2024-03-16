@@ -10,13 +10,41 @@
         <p>{{ page_content }}</p>
     </div>
 </div>
-<p><img src="{% static 'images/wipeout1.jpg' %}" alt="Wipeouts"></p>
-<p><img src="{% static 'images/wipeout2.jpg' %}" alt="Wipeouts"></p>
-<p><img src="{% static 'images/wipeout3.jpg' %}" alt="Wipeouts"></p>
-<p><img src="{% static 'images/wipeout4.jpg' %}" alt="Wipeouts"></p>
-<p><img src="{% static 'images/wipeout5.jpg' %}" alt="Wipeouts"></p>
-<p><img src="{% static 'images/wipeout6.jpg' %}" alt="Wipeouts"></p>
-<p><img src="{% static 'images/wipeout7.webp' %}" alt="Wipeouts"></p>
+
+<html>
+<body>
+       <style>
+      .column {
+        flex: 100.00%;
+        padding: 5px;
+      }
+      </style>
+
+      <div class="row">
+        <div class="column">
+          <img src="{% static 'images/wipeout1.jpg' %}" alt="Wipeouts" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="{% static 'images/wipeout2.jpg' %}" alt="Wipeouts" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="{% static 'images/wipeout3.jpg' %}" alt="Wipeouts" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="{% static 'images/wipeout4.jpg' %}" alt="Wipeouts" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="{% static 'images/wipeout5.jpg' %}" alt="Wipeouts" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="{% static 'images/wipeout6.jpg' %}" alt="Wipeouts" style="width:100%">
+        </div>
+        <div class="column">
+          <img src="{% static 'images/wipeout7.webp' %}" alt="Wipeouts" style="width:100%">
+        </div>
+
+</body>
+</html>
 
 <p><img src="{% static 'images/django-logo-min.png' %}" alt="Django Logo"></p>
 

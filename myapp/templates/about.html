@@ -11,10 +11,31 @@
       
     </div>
 </div>
+<!DOCTYPE html>
+<html>
+<body>
+
+   <style>
+    .column {
+      flex: 50.00%;
+      padding: 5px;
+    }
+    </style>
+
+    <div class="row">
+      <div class="column">
+        <img src="{% static 'images/the-right-australia.jpg' %}" alt="The Right" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="{% static 'images/growing green.jpg' %}" alt="Growing Green" style="width:100%">
+      </div>
+
+  </body>
+  </html>
+  
+ 
 
 
-<p><img src="{% static 'images/the-right-australia.jpg' %}" alt="The Right"></p>
-<p><img src="{% static 'images/growing green.jpg' %}" alt="Growing Green"></p>
 <p><img src="{% static 'images/django-logo-min.png' %}" alt="Django Logo"></p>
 
 {% endblock %}

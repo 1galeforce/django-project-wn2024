@@ -11,11 +11,30 @@
     </div>
 </div>
 
-<p><img src="{% static 'images/Praia do Norte Lighthouse.jpg' %}" alt="Nazaré, Portugal"></p>
+<!DOCTYPE html>
+<html>
+<body>
+  <p>Praia do Norte Lighthouse in Nazaré Portugal, where giant waves are formed due to a submarine canyon called the "Nazaré Canyon".  It is the largest underwater canyon in Europe and is about 230 kilometers (140 miles) long with a depth of approximately 5,000 metres (16,000 ft).</p>
 
+  <style>
+  .column {
+    flex: 50.00%;
+    padding: 5px;
+  }
+  </style>
+  
+  <div class="row">
+    <div class="column">
+      <img src="{% static 'images/Praia do Norte Lighthouse.jpg' %}" alt="Nazaré, Portugal" style="width:100%">
+    </div>
+    <div class="column">
+      <img src="{% static 'images/4994.png' %}" alt="Nazaré, Portugal" style="width:100%">
+    </div>
+  
+</body>
+</html>
 
-<p><img src="{% static 'images/4994.png' %}" alt="Nazaré, Portugal"></p>
-
-<p><img src="{% static 'images/django-logo-min.png' %}" alt="Django Logo"></p>
+<p><img src="{% static 'images/django-logo-min.png' %}" alt="Django Logo">
+</p>
 
 {% endblock %}

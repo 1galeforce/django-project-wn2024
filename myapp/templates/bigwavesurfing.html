@@ -10,15 +10,52 @@
         <p>{{ page_content }}</p>
     </div>
   </div>
-<p><img src="{% static 'images/1.png' %}" alt="Nazaré, Portugal"></p>
-<p><img src="{% static 'images/2.png' %}" alt="Nazaré, Portugal"></p>
-<p><img src="{% static 'images/3.png' %}" alt="Nazaré, Portugal"></p>
-<p><img src="{% static 'images/4.png' %}" alt="Nazaré, Portugal"></p>
-<p><img src="{% static 'images/5.png' %}" alt="Nazaré, Portugal"></p>
-<p><img src="{% static 'images/6.png' %}" alt="Nazaré, Portugal"></p>
-<p><img src="{% static 'images/7.png' %}" alt="Nazaré, Portugal"></p>
-<p><img src="{% static 'images/8.png' %}" alt="Nazaré, Portugal"></p>
-<p><img src="{% static 'images/django-logo-min.png' %}" alt="Django Logo"></p>
+
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>The first video (https://www.youtube.com/watch?v=CIXbZPHLv2o&feature=youtu.be) is of Sebastian Steudtner, a German surfer, breaking the world record for biggest wave ever ridden with a monstrous 86-footer at Nazare in Portugal (October 2020). The next video (https://www.youtube.com/watch?v=1DJxAYc-5IM) was recently filmed over a 3 day period in Febuary 2024 (Feb. 22, 23, and 24) at Nazaré, Portugal.</p>
+
+
+   <style>
+    .column {
+      flex: 100.00%;
+      padding: 5px;
+    }
+    </style>
+
+    <div class="row">
+      <div class="column">
+        <img src="{% static 'images/1.png' %}" alt="Nazaré, Portugal" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="{% static 'images/2.png' %}" alt="Nazaré, Portugal" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="{% static 'images/3.png' %}" alt="Nazaré, Portugal" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="{% static 'images/4.png' %}" alt="Nazaré, Portugal" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="{% static 'images/5.png' %}" alt="Nazaré, Portugal" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="{% static 'images/6.png' %}" alt="Nazaré, Portugal" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="{% static 'images/7.png' %}" alt="Nazaré, Portugal" style="width:100%">
+      </div>
+      <div><img src="{% static 'images/django-logo-min.png' %}" alt="Django Logo" style="width:100%">       </div>
+      
+  </body>
+  </html>
+
+ 
+
+
 
 
 {% endblock %}
