@@ -94,7 +94,7 @@ class SurfingView(View):
     context = {
       'page_title': 'Big Wave Surfing',
       'page_heading': 'Big Wave Surfing',
-      'page_content': '',
+      'page_content': 'The first video is of Sebastian Steudtner, a German surfer, breaking the world record for biggest wave ever ridden with a monstrous 86-footer at Nazare in Portugal (October 2020).<a href="https://www.redbull.com/au-en/the-right-like-youve-never-seen-it-beforehttps://www.youtube.com/watch?v=CIXbZPHLv2o&feature=youtu.be">  Watch</a>', 
     }
     return render(request, 'bigwavesurfing.html', context)
 
@@ -102,11 +102,10 @@ class SurfingView(View):
 class LocationView(View):
  def get(self, request):
     context = {
-      'page_title': 'Best Locations Worldwide',
-      'page_heading': 'BIGGEST WAVES IN THE WORLD',
+      'page_title': 'Best Locations of Big Wave Surfing Worldwide',
+      'page_heading': 'THE BIGGEST WAVES IN THE WORLD',
       'page_content': '',
-  }
-   
+    }
     return render(request, 'location.html', context)
 
 class WipeoutView(View):
@@ -128,22 +127,16 @@ class DangerView(View):
       return render(request, 'danger.html', context)
 
 
-
 # views.py
-
 
 def load_default_data_view(request):
     load_default_data()  # Call the load_default_data function
     return JsonResponse({'status': 'success'})
 
-
-
 class InventionListView(ListView):
     model = Invention
     template_name = 'invention_list.html'
     context_object_name = 'inventions'
-
-
 
 class InventionDetailView(DetailView):
     model = Invention
@@ -156,7 +149,6 @@ class InventionCreateView(LoginRequiredMixin,CreateView):
   template_name = 'create_invention.html'
   success_url = reverse_lazy('invention-list')
 
-  
 class InventionUpdateView(LoginRequiredMixin,UpdateView):
   model = Invention
   form_class = InventionForm
