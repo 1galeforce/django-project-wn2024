@@ -6,8 +6,8 @@
 {% block content %}
 <div class="container">
     <div class="jumbotron">
-        <h1>{{ page_heading }}</h1>
-        <p>{{ page_content }}</p>
+        <h1>{{ page_heading|safe }}</h1>
+        <p>{{ page_content|safe }}</p>
     </div>
 </div>
 
@@ -33,7 +33,10 @@
   
 </body>
 </html>
+<p>
+<a id="3rd">
 
+  &ast;</a> xxx</p>
 <p><img src="{% static 'images/django-logo-min.png' %}" alt="Django Logo">
 </p>
 

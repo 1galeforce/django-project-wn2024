@@ -6,8 +6,8 @@
 {% block content %}
 <div class="container">
     <div class="jumbotron">
-        <h1>{{ page_heading }}</h1>
-        <p>{{ page_content }}</p>
+        <h1>{{ page_heading|safe }}</h1>
+        <p>{{ page_content|safe }}</p>
     </div>
 </div>
 <!DOCTYPE html>
@@ -37,7 +37,9 @@
     <tr>
       <td>Praia do Norte</td>
       <td>Nazaré, Portugal </td>
-      <td>https://www.surfertoday.com/surfing/things-you-didnt-know-about-nazare</td>
+      <td><a href="https://www.surfertoday.com/surfing/things-you-didnt-know-about-nazare" style="display:block;">https://www.surfertoday.com/surfing/things-you-didnt-know-about-nazare</a></td>
+            
+         
     </tr>
     <tr>
       <td>Jaws/Peahi</td>
