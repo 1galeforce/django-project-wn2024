@@ -71,7 +71,7 @@ class HomePageView(BaseView):
       context.update({
       'title': 'Home Page for Big Wave Surfing',
       'page_heading': 'Welcome to the 3rd<a href="#3rd">&ast;</a> most dangerous sport in the world!',
-      'page_content': '',
+      'page_content': 'Watch this video which was recently filmed over a 3 day period in Febuary 2024 (Feb. 22, 23, and 24) at Nazaré, Portugal.<a href="https://www.youtube.com/watch?v=1DJxAYc-5IM">Watch</a>',
       })
       return context
 
@@ -85,7 +85,7 @@ class AboutView(View):
     context = {
       'page_title':'About Big Wave Surfing',
       'page_heading':'Big Wave Surfing in Western Australia',
-      'page_content':'"The Right" is a big wave surfing spot on the southern coast of Western Australia.  The waves are very dangerous because they break over a shallow reef, creating a large hollow tube that can reach up to 20 feet (6 meters) in height. <a href="https://www.redbull.com/au-en/the-right-like-youve-never-seen-it-before">Watch</a>',
+      'page_content':'"The Right" is a big wave surfing spot on the southern coast of Western Australia.  The waves are very dangerous because they break over a shallow reef, creating a large hollow tube that can reach up to 20 feet (6 meters) in height.<a href="https://www.redbull.com/au-en/the-right-like-youve-never-seen-it-before">Watch</a>',
     }
     return render(request, 'about.html', context)
 
@@ -94,7 +94,7 @@ class SurfingView(View):
     context = {
       'page_title': 'Big Wave Surfing',
       'page_heading': 'Big Wave Surfing',
-      'page_content': 'The first video is of Sebastian Steudtner, a German surfer, breaking the world record for biggest wave ever ridden with a monstrous 86-footer at Nazare in Portugal (October 2020).<a href="https://www.redbull.com/au-en/the-right-like-youve-never-seen-it-beforehttps://www.youtube.com/watch?v=CIXbZPHLv2o&feature=youtu.be">  Watch</a>', 
+      'page_content': 'Watch this video of Sebastian Steudtner, a German surfer, breaking the world record for biggest wave ever ridden with a monstrous 86-footer at Nazare in Portugal (October 2020).<a href="https://www.youtube.com/watch?v=CIXbZPHLv2o">Watch</a>', 
     }
     return render(request, 'bigwavesurfing.html', context)
 
