@@ -8,32 +8,51 @@
     <div class="jumbotron">
         <h1>{{ page_heading|safe }}</h1>
         <p>{{ page_content|safe }}</p>
-      
     </div>
-</div>
+  </div>
+
+
 <!DOCTYPE html>
 <html>
 <body>
-
    <style>
     .column {
-      flex: 50.00%;
+      flex: 100.00%;
       padding: 5px;
     }
     </style>
 
     <div class="row">
       <div class="column">
-        <img src="{% static 'images/the-right-australia.jpg' %}" alt="The Right" style="width:100%">
+        <img src="{% static 'images/1.png' %}" alt="Nazaré, Portugal" style="width:100%">
       </div>
       <div class="column">
-        <img src="{% static 'images/growing green.jpg' %}" alt="Growing Green" style="width:100%">
+        <img src="{% static 'images/2.png' %}" alt="Nazaré, Portugal" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="{% static 'images/3.png' %}" alt="Nazaré, Portugal" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="{% static 'images/4.png' %}" alt="Nazaré, Portugal" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="{% static 'images/5.png' %}" alt="Nazaré, Portugal" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="{% static 'images/6.png' %}" alt="Nazaré, Portugal" style="width:100%">
+      </div>
+      <div class="column">
+        <img src="{% static 'images/7.png' %}" alt="Nazaré, Portugal" style="width:100%">
       </div>
 
+
+
+
+  <p><img src="{% static 'images/django-logo-min.png' %}" alt="Django Logo">
+      </p>
   </body>
   </html>
 
-<p><img src="{% static 'images/django-logo-min.png' %}" alt="Django Logo"></p>
+ {% endblock %}
 
-{% endblock %}
 

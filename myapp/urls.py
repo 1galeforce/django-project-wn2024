@@ -3,6 +3,7 @@ from . import views
 from .views import HomePageView
 from .views import AboutView
 from .views import SurfingView
+from .views import CreationView
 from .views import LocationView
 from .views import WipeoutView
 from .views import DangerView
@@ -12,6 +13,7 @@ urlpatterns = [
   path("", HomePageView.as_view(), name="home"),
   path("about/", AboutView.as_view(), name="about"),
   path('surfing/', SurfingView.as_view(), name='bigwavesurfing'),
+  path('creation/', CreationView.as_view(), name= 'creation_view'),
   path('location/', LocationView.as_view(), name='location_view'),
   path('wipeout/', WipeoutView.as_view(), name= 'wipeout_view'),
   path('danger/', DangerView.as_view(), name='danger_view'),

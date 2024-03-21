@@ -69,8 +69,8 @@ class HomePageView(BaseView):
     def get_context_data(self, **kwargs):
       context = super().get_context_data(**kwargs)
       context.update({
-      'title': 'Home Page for Big Wave Surfing',
-      'page_heading': 'Welcome to the 3rd<a href="#3rd">&ast;</a> most dangerous sport in the world!',
+      'title': 'Big Wave Surfing',
+      'page_heading': 'Big Wave Surfing is considered to be the 3rd<a href="#3rd">&ast;</a> most dangerous sport in the world!',
       'page_content': 'Watch this video which was recently filmed over a 3 day period in Febuary 2024 (Feb. 22, 23, and 24) at Nazaré, Portugal.<a href="https://www.youtube.com/watch?v=1DJxAYc-5IM">Watch</a>',
       })
       return context
@@ -82,12 +82,35 @@ class AboutView(BaseView):
       context = super().get_context_data(**kwargs)
       context.update({
       'title': 'About Big Wave Surfing',
-      'page_heading': 'Big Wave Surfing in Western Australia',
-      'page_content': '"The Right" is a big wave surfing spot on the southern coast of Western Australia.  The waves are very dangerous because they break over a shallow reef, creating a large hollow tube that can reach up to 20 feet (6 meters) in height.<a href="https://www.redbull.com/au-en/the-right-like-youve-never-seen-it-before">Watch</a>',
+      'page_heading': 'About Big Wave Surfing',
+      'page_content': 'Watch this video of Sebastian Steudtner, a German surfer, breaking the world record for biggest wave ever ridden with a monstrous 86-footer at Nazare in Portugal (October 2020).<a href="https://www.youtube.com/watch?v=CIXbZPHLv2o&t=5s">Watch</a>', 
       })
       return context
+      
+class CreationView(BaseView):
+  template_name = 'creation.html'
 
+  def get_context_data(self, **kwargs):
+    context = super().get_context_data(**kwargs)
+    context.update({
+    'title': 'Wave Creation',
+    'page_heading': 'Creation of Big Waves',
+    'page_content': 'Under Construction. <a href="https://kimasurf.com/news/biggest-waves-in-the-world">Read</a>', 
+    })
+    return context
 
+class LocationView(BaseView): 
+  template_name = 'location.html'
+
+  def get_context_data(self, **kwargs):
+    context = super().get_context_data(**kwargs)
+    context.update({
+    'title': 'Locations for Big Wave Surfing Worldwide',
+    'page_heading': 'The Biggest Waves in the World',
+    'page_content': '<a href="https://www.youtube.com/watch?v=cy-VRzebLqo">Listen</a>', 
+    })
+    return context
+    
 class SurfingView(BaseView): 
     template_name = 'bigwavesurfing.html'
 
@@ -96,21 +119,11 @@ class SurfingView(BaseView):
       context.update({
       'title': 'Big Wave Surfing',
       'page_heading': 'Big Wave Surfing',
-      'page_content': 'Watch this video of Sebastian Steudtner, a German surfer, breaking the world record for biggest wave ever ridden with a monstrous 86-footer at Nazare in Portugal (October 2020).<a href="https://www.youtube.com/watch?v=CIXbZPHLv2o">Watch</a>', 
+      'page_content': '"The Right" is a big wave surfing spot on the southern coast of Western Australia.  The waves are very dangerous because they break over a shallow reef, creating a large hollow tube that can reach up to 20 feet (6 meters) in height.<a href="https://www.redbull.com/au-en/the-right-like-youve-never-seen-it-before">Watch</a>',
       })
       return context
 #xxxxx
-class LocationView(BaseView): 
-    template_name = 'location.html'
 
-    def get_context_data(self, **kwargs):
-      context = super().get_context_data(**kwargs)
-      context.update({
-      'title': 'Best Locations for Big Wave Surfing Worldwide',
-      'page_heading': 'THE BIGGEST WAVES IN THE WORLD',
-      'page_content': '', 
-      })
-      return context
   
 class WipeoutView(BaseView): 
     template_name = 'wipeout.html'
@@ -120,14 +133,11 @@ class WipeoutView(BaseView):
       context.update({
       'title': 'Wipeouts',
       'page_heading': 'WIPEOUTS',
-      'page_content': '', 
+      'page_content': 'Under Construction', 
       })
       return context
-
-
-
- #xxxxxx
-
+ 
+      
 class DangerView(BaseView): 
     template_name = 'danger.html'
 
@@ -136,7 +146,7 @@ class DangerView(BaseView):
       context.update({
       'title': 'Surfing Dangers',
       'page_heading': 'SURFING DANGERS',
-      'page_content': '', 
+      'page_content': 'Under Construction', 
       })
       return context
 
