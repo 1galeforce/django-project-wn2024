@@ -75,57 +75,70 @@ class HomePageView(BaseView):
       })
       return context
 
+class AboutView(BaseView): 
+    template_name = 'about.html'
 
-    
+    def get_context_data(self, **kwargs):
+      context = super().get_context_data(**kwargs)
+      context.update({
+      'title': 'About Big Wave Surfing',
+      'page_heading': 'Big Wave Surfing in Western Australia',
+      'page_content': '"The Right" is a big wave surfing spot on the southern coast of Western Australia.  The waves are very dangerous because they break over a shallow reef, creating a large hollow tube that can reach up to 20 feet (6 meters) in height.<a href="https://www.redbull.com/au-en/the-right-like-youve-never-seen-it-before">Watch</a>',
+      })
+      return context
 
 
-class AboutView(View):  
-  template_name = "about.html"
-  def get(self, request):
-    context = {
-      'page_title':'About Big Wave Surfing',
-      'page_heading':'Big Wave Surfing in Western Australia',
-      'page_content':'"The Right" is a big wave surfing spot on the southern coast of Western Australia.  The waves are very dangerous because they break over a shallow reef, creating a large hollow tube that can reach up to 20 feet (6 meters) in height.<a href="https://www.redbull.com/au-en/the-right-like-youve-never-seen-it-before">Watch</a>',
-    }
-    return render(request, 'about.html', context)
+class SurfingView(BaseView): 
+    template_name = 'bigwavesurfing.html'
 
-class SurfingView(View):
-  def get(self, request):
-    context = {
-      'page_title': 'Big Wave Surfing',
+    def get_context_data(self, **kwargs):
+      context = super().get_context_data(**kwargs)
+      context.update({
+      'title': 'Big Wave Surfing',
       'page_heading': 'Big Wave Surfing',
       'page_content': 'Watch this video of Sebastian Steudtner, a German surfer, breaking the world record for biggest wave ever ridden with a monstrous 86-footer at Nazare in Portugal (October 2020).<a href="https://www.youtube.com/watch?v=CIXbZPHLv2o">Watch</a>', 
-    }
-    return render(request, 'bigwavesurfing.html', context)
+      })
+      return context
+#xxxxx
+class LocationView(BaseView): 
+    template_name = 'location.html'
 
-
-class LocationView(View):
- def get(self, request):
-    context = {
-      'page_title': 'Best Locations of Big Wave Surfing Worldwide',
+    def get_context_data(self, **kwargs):
+      context = super().get_context_data(**kwargs)
+      context.update({
+      'title': 'Best Locations for Big Wave Surfing Worldwide',
       'page_heading': 'THE BIGGEST WAVES IN THE WORLD',
-      'page_content': '',
-    }
-    return render(request, 'location.html', context)
+      'page_content': '', 
+      })
+      return context
+  
+class WipeoutView(BaseView): 
+    template_name = 'wipeout.html'
 
-class WipeoutView(View):
- def get(self, request):
-    context = {
-      'page_title': 'Wipeouts',
-      'page_heading': 'Wipeouts',
-      'page_content': '',
-    }
-    return render(request, 'wipeout.html', context)
+    def get_context_data(self, **kwargs):
+      context = super().get_context_data(**kwargs)
+      context.update({
+      'title': 'Wipeouts',
+      'page_heading': 'WIPEOUTS',
+      'page_content': '', 
+      })
+      return context
 
-class DangerView(View):
-  def get(self, request):
-      context = {
-        'page_title': 'Surfing Dangers',
-        'page_heading': 'Surfing Dangers',
-        'page_content': '',
-      }
-      return render(request, 'danger.html', context)
 
+
+ #xxxxxx
+
+class DangerView(BaseView): 
+    template_name = 'danger.html'
+
+    def get_context_data(self, **kwargs):
+      context = super().get_context_data(**kwargs)
+      context.update({
+      'title': 'Surfing Dangers',
+      'page_heading': 'SURFING DANGERS',
+      'page_content': '', 
+      })
+      return context
 
 # views.py
 
